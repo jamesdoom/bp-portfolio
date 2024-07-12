@@ -1,0 +1,63 @@
+#portfolio {
+  padding: 2rem 2rem;
+  max-width: 800px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  width: calc(33% - 2rem);
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  overflow: hidden;            
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-title {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  color: var(--text-color);
+  overflow: hidden;            
+  text-overflow: ellipsis;     
+  white-space: nowrap;          
+}
+
+.project-link {
+  color: var(--link-color);
+  text-decoration: none;
+  margin-top: 0.5rem;            
+}
+
+.project-link:hover {
+  color: var(--link-hover-color);
+}

@@ -1,0 +1,93 @@
+#skills {
+  padding: 2rem 2rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto; 
+  border-radius: 15px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.skill {
+  background-color: var(--background-color);
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  color: var(--text-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill.large {
+  width: calc(100% - 1rem); 
+}
+
+.skill.small {
+  width: calc(50% - 1rem);
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+}
+
+.skill-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-description {
+  font-size: 1rem;
+  color: var(--secondary-text-color);
+  text-align: center;
+}
+
+.certificate-link {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--link-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.certificate-link img {
+  margin-right: 0.5rem;
+  border: 1px solid #fff;
+  border-radius: 1px;
+  width: 20px;
+  height: 20px;
+}
+
+.certificate-link:hover {
+  text-decoration: underline;
+}
+
+.certificates-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start; 
+  gap: 0.5rem; 
+  padding: 0 2rem;
+}
+
+.certificates-container.two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .5rem;
+  padding: 0 2rem;
+}

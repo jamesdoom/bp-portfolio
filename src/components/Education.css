@@ -1,0 +1,68 @@
+#education {
+    padding: 1rem 2rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto; 
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--text-color);
+  }
+  
+  .education-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: nowrap; 
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 2rem;
+  }
+  
+  .education-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: left;
+    background-color: var(--background-color);
+    max-width: 45%; 
+  }
+  
+  .education-logo {
+    width: 50px;
+    height: 50px;
+  
+  }
+  
+  .education-details {
+    color: var(--text-color);
+  }
+  
+  .education-details h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--text-color);
+  }
+  
+  .education-details p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+    line-height: 1.5; 
+    margin-bottom: 0.5rem;
+  }
+  
+  .degree-type {
+    font-weight: bold;
+  }
+  
+  .honors {
+    font-style: italic;
+    color: var(--link-color);
+  }
+  
