@@ -6,7 +6,9 @@ import Education from './components/Education';
 import Portfolio from './components/Portfolio';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 import './App.css';
+
 
 const App = () => {
   return (
@@ -18,6 +20,7 @@ const App = () => {
       <Skills />
       <Portfolio />
       <Contact />
+      <Footer />
     </div>
   );
 };

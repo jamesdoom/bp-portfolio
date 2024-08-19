@@ -1,0 +1,31 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-top: 1px solid var(--secondary-background-color);
+  margin-top: 2rem;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+}
+
+.back-to-top {
+  color: var(--link-color);
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.back-to-top:hover {
+  color: var(--link-hover-color);
+}

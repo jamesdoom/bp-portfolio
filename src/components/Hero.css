@@ -12,17 +12,6 @@
   margin-top: 1rem;
 }
 
-.hero-content::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
 .hero-content h1,
 .hero-content p,
 .hero-content .cta-button {
@@ -33,12 +22,13 @@
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero-content p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
 }
 
 .cta-button {
@@ -55,4 +45,3 @@
   background-color: #61dafb;
   color: #fff;
 }
-
