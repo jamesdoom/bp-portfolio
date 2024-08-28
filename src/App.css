@@ -34,3 +34,31 @@ a {
 a:hover {
   color: var(--link-hover-color);
 }
+
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Adjust the base font size for better readability on smaller screens */
+  }
+
+  h2 {
+    font-size: 1.8rem; /* Adjust heading sizes for mobile */
+  }
+
+  .experience-body {
+    padding: 1rem; /* Add padding to sections for better spacing on mobile */
+  }
+
+  .experience-content {
+    width: 100%; /* Ensure content takes up the full width on smaller screens */
+    padding: 0 1rem; /* Add padding to ensure content doesn’t touch the edges */
+  }
+
+  .job h3 {
+    font-size: 1.2rem; /* Adjust job titles to fit better on smaller screens */
+  }
+
+  .job ul {
+    padding-left: 1rem; /* Reduce padding to fit content within smaller screens */
+  }
+}
