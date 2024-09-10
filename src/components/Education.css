@@ -1,68 +1,71 @@
 #education {
-    padding: 1rem 2rem;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    max-width: 800px;
-    margin: 0 auto; 
-  }
-  
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    color: var(--text-color);
-  }
-  
+  padding: 2rem 1rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+#education h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap; 
+  gap: 1.5rem; 
+}
+
+.education-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 300px;
+  width: 100%;
+  min-height: 350px; 
+  justify-content: center; 
+  text-align: center;
+}
+
+.education-logo {
+  max-width: 100px;
+  max-height: 100px;
+  margin-bottom: 1rem;
+  align-self: center;
+}
+
+.education-details {
+  text-align: start;
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+.degree-type {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.honors {
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
   .education-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-    flex-wrap: nowrap; 
-    border: 2px solid #fff;
-    border-radius: 8px;
-    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .education-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    text-align: left;
-    background-color: var(--background-color);
-    max-width: 45%; 
+    max-width: 100%;
+    min-height: auto;
   }
-  
-  .education-logo {
-    width: 50px;
-    height: 50px;
-  
-  }
-  
-  .education-details {
-    color: var(--text-color);
-  }
-  
-  .education-details h3 {
-    margin: 0;
-    font-size: 1.25rem;
-    color: var(--text-color);
-  }
-  
-  .education-details p {
-    margin: 0;
-    font-size: 1rem;
-    color: var(--secondary-text-color);
-    line-height: 1.5; 
-    margin-bottom: 0.5rem;
-  }
-  
-  .degree-type {
-    font-weight: bold;
-  }
-  
-  .honors {
-    font-style: italic;
-    color: var(--link-color);
-  }
-  
+}

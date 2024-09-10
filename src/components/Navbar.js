@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import Icon from '@mdi/react';
-import { mdiFolderMusicOutline } from '@mdi/js';
+import { mdiFolderMusicOutline, mdiMenu } from '@mdi/js'; // Import mdiMenu for the hamburger icon
 
 const Navbar = () => {
+  const [isNavVisible, setNavVisible] = useState(false);
+
+  // Function to toggle the navigation menu
+  const toggleNav = () => {
+    setNavVisible(!isNavVisible);
+  };
+
   return (
     <nav className="navbar">
       <div className="logo">
@@ -11,7 +18,11 @@ const Navbar = () => {
         <span className="logo-text">Brian Palmer</span>
       </div>
 
-      <ul className="nav-links">
+      <button className="toggle-button" onClick={toggleNav}>
+        <Icon path={mdiMenu} size={1.5} /> {/* Hamburger Icon */}
+      </button>
+
+      <ul className={`nav-links ${isNavVisible ? 'show' : ''}`}>
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -23,6 +34,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
 
 

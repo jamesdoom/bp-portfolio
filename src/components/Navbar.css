@@ -68,6 +68,11 @@ body {
   color: #61dafb;
 }
 
+.toggle-button {
+  display: none; /* Hide on desktop */
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
@@ -78,19 +83,19 @@ body {
     right: 0;
     width: 100%;
     padding: 1rem;
-    display: none;
+    display: none; /* Hidden by default */
   }
 
   .nav-links.show {
-    display: flex;
+    display: flex; /* Show when the toggle button is clicked */
   }
 
   .navbar {
     justify-content: space-between;
   }
 
-  .navbar .toggle-button {
-    display: block;
+  .toggle-button {
+    display: block; /* Show toggle button on mobile */
     background: none;
     border: none;
     color: white;
