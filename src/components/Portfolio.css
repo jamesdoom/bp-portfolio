@@ -1,10 +1,9 @@
 #portfolio {
   padding: 2rem 2rem;
-  max-width: 800px;
+  max-width: 1000px; /* Adjusted for better flexibility */
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0 auto;
- 
 }
 
 h2 {
@@ -35,7 +34,7 @@ h2 {
   box-shadow: var(--box-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
-  overflow: hidden;            
+  overflow: hidden;
 }
 
 .project:hover {
@@ -47,17 +46,29 @@ h2 {
   font-size: 1.25rem;
   margin: 0.5rem 0;
   color: var(--text-color);
-  overflow: hidden;            
+  word-wrap: break-word; /* Allows titles to wrap to new lines */
+  white-space: normal;   /* Ensure titles can wrap to multiple lines */
+  overflow: hidden;
   text-overflow: ellipsis;     
-  white-space: nowrap;          
 }
 
 .project-link {
   color: var(--link-color);
   text-decoration: none;
-  margin-top: 0.5rem;            
+  margin-top: 0.5rem;
 }
 
 .project-link:hover {
   color: var(--link-hover-color);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .project {
+    width: calc(100% - 2rem); /* Make each project take full width on mobile */
+  }
+
+  .project-title {
+    font-size: 1.1rem; /* Slightly smaller font on mobile for better fit */
+  }
 }

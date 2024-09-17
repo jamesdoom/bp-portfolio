@@ -2,8 +2,8 @@
   padding: 1rem 2rem;
   background-color: var(--background-color);
   color: var(--text-color);
-  max-width: 800px;
-  margin: 0 auto; 
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 h2 {
@@ -21,11 +21,14 @@ h2 {
 }
 
 .skill {
+  display: flex;
+  flex-direction: column;
   background-color: var(--background-color);
   border: 2px solid #fff;
   border-radius: 8px;
   padding: 1rem;
   box-shadow: var(--box-shadow);
+  align-items: center;
   text-align: center;
   color: var(--text-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -56,16 +59,19 @@ h2 {
 
 .certificate-link {
   margin-top: 0.5rem;
+  margin-right: 0.5rem;
   font-size: 0.9rem;
   color: var(--link-color);
   text-decoration: none;
   display: flex;
-  align-items: center;
+  align-items: start;
+  text-align: left;
   justify-content: start;
 }
 
 .certificate-link img {
   margin-right: 0.5rem;
+  margin-left: 0.5rem;
   border: 1px solid #fff;
   border-radius: 1px;
   width: 20px;
@@ -89,4 +95,24 @@ h2 {
   grid-template-columns: repeat(2, 1fr);
   gap: .5rem;
   padding: 0 2rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill.small {
+    width: 100%; /* Stack JavaScript and HTML & CSS vertically */
+  }
+
+  .skill.large {
+    width: 100%; /* Ensure Backend Development takes full width */
+  }
+
+  .certificates-container.two-columns {
+    grid-template-columns: repeat(1, 1fr); /* Stack certificates in one column on mobile */
+  }
 }
