@@ -47,7 +47,10 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <h2>Contact</h2>
+      <div className="section-heading">
+        <span>Contact</span>
+        <h2>Let&apos;s Connect</h2>
+      </div>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

@@ -1,25 +1,27 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import Icon from '@mdi/react';
-import { mdiFolderMusicOutline, mdiMenu } from '@mdi/js'; // Import mdiMenu for the hamburger icon
+import { mdiMenu } from '@mdi/js';
 
 const Navbar = () => {
   const [isNavVisible, setNavVisible] = useState(false);
 
-  // Function to toggle the navigation menu
   const toggleNav = () => {
     setNavVisible(!isNavVisible);
   };
 
   return (
     <nav className="navbar">
-      <div className="logo">
-        <Icon path={mdiFolderMusicOutline} size={1} className="logo-icon" />
-        <span className="logo-text">Brian Palmer</span>
-      </div>
+      <a href="#hero" className="wordmark" aria-label="Brian Palmer home">
+        <span className="wordmark-mark">BP</span>
+        <span className="wordmark-copy">
+          <span className="wordmark-name">Brian Palmer</span>
+          <span className="wordmark-role">Full-Stack Developer</span>
+        </span>
+      </a>
 
-      <button className="toggle-button" onClick={toggleNav}>
-        <Icon path={mdiMenu} size={1.5} /> {/* Hamburger Icon */}
+      <button className="toggle-button" onClick={toggleNav} aria-label="Toggle navigation">
+        <Icon path={mdiMenu} size={1.35} />
       </button>
 
       <ul className={`nav-links ${isNavVisible ? 'show' : ''}`}>

@@ -1,67 +1,65 @@
 #education {
-  padding: 2rem 1rem;
   background-color: var(--background-color);
   color: var(--text-color);
+  padding: 5.5rem 1.5rem;
   text-align: center;
-}
-
-#education h2 {
-  font-size: 2rem;
-  margin-bottom: 3rem;
 }
 
 .education-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
   justify-content: center;
-  flex-wrap: wrap; 
-  gap: 1.5rem; 
 }
 
 .education-item {
+  align-items: center;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: 2px solid #fff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  border-radius: 8px;
+  justify-content: center;
   max-width: 300px;
-  width: 100%;
-  min-height: 350px; 
-  justify-content: center; 
+  min-height: 330px;
+  padding: 1.5rem;
   text-align: center;
+  width: 100%;
 }
 
 .education-logo {
-  max-width: 100px;
-  max-height: 100px;
-  margin-bottom: 1rem;
   align-self: center;
+  margin-bottom: 1rem;
+  max-height: 100px;
+  max-width: 100px;
 }
 
 .education-details {
-  text-align: start;
-  flex-grow: 1; 
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+  text-align: center;
 }
 
 .degree-type {
+  color: var(--secondary-text-color);
   font-weight: bold;
   margin-top: 0.5rem;
 }
 
 .honors {
+  color: var(--accent-color);
   font-style: italic;
 }
 
 @media (max-width: 768px) {
   .education-list {
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
   }
 
   .education-item {

@@ -1,55 +1,69 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
 .navbar {
+  align-items: center;
+  background: rgba(8, 10, 14, 0.88);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+  color: #fff;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 2rem;
-  background-color: #00050f;
-  color: #fff;
+  min-height: 68px;
+  padding: 0.65rem clamp(1.25rem, 4vw, 3rem);
   position: fixed;
-  width: 100%;
   top: 0;
+  width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-  display: flex;
+.wordmark {
   align-items: center;
+  color: var(--text-color);
+  display: flex;
+  gap: 0.8rem;
+  text-decoration: none;
 }
 
-.logo-icon {
-  height: 40px;
-  width: auto; 
-  margin-right: 0.5rem; 
-  color: #fff; 
+.wordmark:hover {
+  color: var(--text-color);
 }
 
-.logo-text {
-  font-family: 'Pacifico', cursive;
-  font-size: 1.2rem; 
-  color: #00050f;
-  text-shadow: 
-    -1px -1px 0 #fff,  
-    1px -1px 0 #fff,
-    -1px 1px 0 #fff,
-    1px 1px 0 #fff; 
+.wordmark-mark {
+  align-items: center;
+  background: var(--text-color);
+  border-radius: 50%;
+  color: var(--background-color);
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 900;
+  height: 2.35rem;
+  justify-content: center;
+  width: 2.35rem;
+}
+
+.wordmark-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.wordmark-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.wordmark-role {
+  color: var(--muted-text-color);
+  font-size: 0.76rem;
+  font-weight: 700;
+  margin-top: 0.1rem;
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  margin: 0;
   align-items: center;
+  display: flex;
+  gap: 1.4rem;
+  list-style: none;
+  margin: 0;
 }
 
 .nav-links li {
@@ -57,37 +71,39 @@ body {
 }
 
 .nav-links a {
-  color: #fff;
+  color: var(--secondary-text-color);
+  font-size: 0.95rem;
+  font-weight: 700;
   text-decoration: none;
-  font-size: 1rem;
   transition: color 0.3s ease;
   white-space: nowrap;
 }
 
 .nav-links a:hover {
-  color: #61dafb;
+  color: var(--link-color);
 }
 
 .toggle-button {
-  display: none; /* Hide on desktop */
+  display: none;
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
   .nav-links {
+    align-items: stretch;
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
-    background-color: #282c34;
+    padding: 1rem 1.5rem;
     position: absolute;
-    top: 60px;
     right: 0;
+    top: 68px;
     width: 100%;
-    padding: 1rem;
-    display: none; /* Hidden by default */
   }
 
   .nav-links.show {
-    display: flex; /* Show when the toggle button is clicked */
+    display: flex;
   }
 
   .navbar {
@@ -95,12 +111,16 @@ body {
   }
 
   .toggle-button {
-    display: block; /* Show toggle button on mobile */
+    align-items: center;
     background: none;
     border: none;
-    color: white;
-    font-size: 1.5rem;
+    color: var(--text-color);
     cursor: pointer;
+    display: inline-flex;
+    padding: 0.25rem;
+  }
+
+  .wordmark-role {
+    display: none;
   }
 }
-

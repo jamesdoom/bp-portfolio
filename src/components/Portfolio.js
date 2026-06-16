@@ -2,6 +2,24 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Portfolio.css';
 
+const featuredProjectNames = [
+  'api-playground-dashboard',
+  'memorabiliaDB',
+  'wheel',
+  'bp-portfolio',
+  'bp-shopping-cart',
+  'bp-battleship-app',
+];
+
+const projectHighlights = {
+  'api-playground-dashboard': 'Interactive dashboard work with a modern TypeScript stack and API-driven UI patterns.',
+  memorabiliaDB: 'Inventory-style application work focused on collection data, filtering, and practical workflows.',
+  wheel: 'A polished selector tool that turns a simple utility into an interactive browser experience.',
+  'bp-portfolio': 'The portfolio you are viewing now, built with React and continuously refined.',
+  'bp-shopping-cart': 'React shopping-cart project with product browsing and stateful cart behavior.',
+  'bp-battleship-app': 'Browser game project practicing modular JavaScript, game state, and interaction logic.',
+};
+
 const Portfolio = () => {
   const [projects, setProjects] = useState([]);
   const [status, setStatus] = useState('loading');
@@ -16,11 +34,12 @@ const Portfolio = () => {
         },
       })
       .then((response) => {
-        const publicProjects = response.data
-          .filter((project) => !project.fork)
-          .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+        const publicProjects = response.data.filter((project) => !project.fork);
+        const curatedProjects = featuredProjectNames
+          .map((projectName) => publicProjects.find((project) => project.name === projectName))
+          .filter(Boolean);
 
-        setProjects(publicProjects);
+        setProjects(curatedProjects);
         setStatus('ready');
       })
       .catch((error) => {
@@ -37,7 +56,11 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio">
-      <h2>Portfolio</h2>
+      <div className="section-heading">
+        <span>Selected Work</span>
+        <h2>Featured Projects</h2>
+        <p>A focused set of public repositories that best represents my current full-stack direction.</p>
+      </div>
       {status === 'loading' && <p className="portfolio-status">Loading public GitHub repositories...</p>}
       {status === 'error' && (
         <p className="portfolio-status portfolio-status-error">
@@ -50,7 +73,7 @@ const Portfolio = () => {
             <div className="project-content">
               <h3 className="project-title">{project.name.replaceAll('-', ' ')}</h3>
               <p className="project-description">
-                {project.description || 'A public GitHub repository from my development portfolio.'}
+                {projectHighlights[project.name] || project.description || 'A selected public repository from my development portfolio.'}
               </p>
             </div>
             <div className="project-meta">

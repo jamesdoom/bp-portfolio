@@ -95,7 +95,10 @@ const Skills = () => {
 
   return (
     <section id="skills">
-      <h2>Skills</h2>
+      <div className="section-heading">
+        <span>Toolkit</span>
+        <h2>Skills & Certifications</h2>
+      </div>
       <div className="skills-list">
         {skills.map((skill, index) => (
           <div key={index} className={`skill ${skill.title === 'Backend Development' ? 'large' : 'small'}`}>

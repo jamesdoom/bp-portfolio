@@ -5,9 +5,10 @@ const Hero = () => {
   return (
     <section id="hero">
       <div className="hero-content">
-        <h1>Welcome!</h1>
-        <p>Discover my projects and skills.</p>
-        <a href="#skills" className="cta-button">Explore</a>
+        <p className="hero-kicker">Tampa-based developer</p>
+        <h1>Brian Palmer</h1>
+        <p>Full-stack JavaScript developer building practical, data-driven web applications.</p>
+        <a href="#portfolio" className="cta-button">View Projects</a>
       </div>
     </section>
   );

@@ -4,6 +4,11 @@ import './About.css';
 const About = () => {
   return (
     <section id="about">
+      <div className="section-heading">
+        <span>Profile</span>
+        <h2>About Brian</h2>
+        <p>A technology-minded operator moving practical business experience into full-stack software development.</p>
+      </div>
       <div className="about-content">
         <img src="/brian.png" alt="Brian Palmer" className="about-image" />
         <p>Hello, I&apos;m Brian. For as long as I can remember, I&apos;ve been deeply interested and involved in computer technology. Even when my professional titles had very little to do with IT, I always ended up being &apos;that&apos; guy who could troubleshoot problems and implement new tech.</p>
