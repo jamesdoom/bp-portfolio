@@ -7,9 +7,11 @@
   background-size: cover;
   position: relative;
   color: #fff;
+  text-align: center;
   width: 100%;
   min-height: 40vh;
   margin-top: 1rem;
+  padding: 0 1.5rem;
 }
 
 .hero-content h1,
@@ -27,7 +29,10 @@
 
 .hero-content p {
   font-size: 1.5rem;
+  line-height: 1.4;
   margin-bottom: 2rem;
+  max-width: 34rem;
+  text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
 }
 
@@ -44,4 +49,19 @@
 .cta-button:hover {
   background-color: #61dafb;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    min-height: 430px;
+    padding: 0 1.25rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.55rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
 }

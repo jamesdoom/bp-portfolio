@@ -1,6 +1,6 @@
 #portfolio {
-  padding: 2rem 2rem;
-  max-width: 1000px; /* Adjusted for better flexibility */
+  padding: 4rem 2rem;
+  max-width: 1120px;
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0 auto;
@@ -15,60 +15,104 @@ h2 {
 }
 
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
 }
 
 .project {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--background-color);
-  border: 2px solid #fff;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 220px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
-  padding: 1rem;
-  width: calc(33% - 2rem);
-  box-shadow: var(--box-shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
+  padding: 1.25rem;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.22);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
   overflow: hidden;
 }
 
 .project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+  border-color: rgba(97, 218, 251, 0.7);
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.3);
 }
 
 .project-title {
-  font-size: 1.25rem;
-  margin: 0.5rem 0;
+  font-size: 1.15rem;
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
   color: var(--text-color);
-  word-wrap: break-word; /* Allows titles to wrap to new lines */
-  white-space: normal;   /* Ensure titles can wrap to multiple lines */
-  overflow: hidden;
-  text-overflow: ellipsis;     
+  text-transform: capitalize;
+  word-break: break-word;
+}
+
+.project-description {
+  color: var(--secondary-text-color);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0;
+  text-align: left;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0;
+}
+
+.project-meta span {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  color: var(--secondary-text-color);
+  font-size: 0.78rem;
+  padding: 0.3rem 0.55rem;
 }
 
 .project-link {
+  align-self: flex-start;
   color: var(--link-color);
   text-decoration: none;
-  margin-top: 0.5rem;
+  font-weight: 700;
+  margin-top: auto;
 }
 
 .project-link:hover {
   color: var(--link-hover-color);
 }
 
-/* Mobile adjustments */
+.portfolio-status {
+  color: var(--secondary-text-color);
+  margin: 0 auto 1.5rem;
+  max-width: 640px;
+  text-align: center;
+}
+
+.portfolio-status-error {
+  color: #ffb4b4;
+}
+
+@media (max-width: 960px) {
+  .projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
-  .project {
-    width: calc(100% - 2rem); /* Make each project take full width on mobile */
+  #portfolio {
+    padding: 3rem 1.5rem;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
   }
 
   .project-title {
-    font-size: 1.1rem; /* Slightly smaller font on mobile for better fit */
+    font-size: 1.1rem;
   }
 }
