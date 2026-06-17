@@ -20,6 +20,12 @@ const projectHighlights = {
   'bp-battleship-app': 'Browser game project practicing modular JavaScript, game state, and interaction logic.',
 };
 
+const formatProjectTitle = (projectName) =>
+  projectName
+    .replace(/^bp[-_]+/i, '')
+    .replaceAll('-', ' ')
+    .replaceAll('_', ' ');
+
 const Portfolio = () => {
   const [projects, setProjects] = useState([]);
   const [status, setStatus] = useState('loading');
@@ -71,7 +77,7 @@ const Portfolio = () => {
         {projects.map((project) => (
           <div key={project.id} className="project">
             <div className="project-content">
-              <h3 className="project-title">{project.name.replaceAll('-', ' ')}</h3>
+              <h3 className="project-title">{formatProjectTitle(project.name)}</h3>
               <p className="project-description">
                 {projectHighlights[project.name] || project.description || 'A selected public repository from my development portfolio.'}
               </p>
