@@ -6,25 +6,43 @@ const featuredProjectNames = [
   'api-playground-dashboard',
   'memorabiliaDB',
   'wheel',
+  'imgPrev',
   'bp-portfolio',
   'bp-shopping-cart',
   'bp-battleship-app',
 ];
 
+const projectDisplayTitles = {
+  'api-playground-dashboard': 'API Playground Dashboard',
+  memorabiliaDB: 'MemorabiliaDB',
+  imgPrev: 'Image Editor',
+};
+
 const projectHighlights = {
   'api-playground-dashboard': 'Interactive dashboard work with a modern TypeScript stack and API-driven UI patterns.',
   memorabiliaDB: 'Inventory-style application work focused on collection data, filtering, and practical workflows.',
   wheel: 'A polished selector tool that turns a simple utility into an interactive browser experience.',
+  imgPrev: 'Image editing and preview tooling focused on a clean, practical browser workflow.',
   'bp-portfolio': 'The portfolio you are viewing now, built with React and continuously refined.',
   'bp-shopping-cart': 'React shopping-cart project with product browsing and stateful cart behavior.',
   'bp-battleship-app': 'Browser game project practicing modular JavaScript, game state, and interaction logic.',
 };
 
-const formatProjectTitle = (projectName) =>
-  projectName
-    .replace(/^bp[-_]+/i, '')
-    .replaceAll('-', ' ')
-    .replaceAll('_', ' ');
+const toTitleCase = (title) =>
+  title.replace(/\b\w/g, (letter) => letter.toUpperCase());
+
+const formatProjectTitle = (projectName) => {
+  if (projectDisplayTitles[projectName]) {
+    return projectDisplayTitles[projectName];
+  }
+
+  return toTitleCase(
+    projectName
+      .replace(/^bp[-_]+/i, '')
+      .replaceAll('-', ' ')
+      .replaceAll('_', ' ')
+  );
+};
 
 const Portfolio = () => {
   const [projects, setProjects] = useState([]);
