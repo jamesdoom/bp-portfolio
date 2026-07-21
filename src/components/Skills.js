@@ -1,130 +1,189 @@
 import React from 'react';
 import './Skills.css';
 
-const Skills = () => {
-  const skills = [
-    { 
-      title: 'JavaScript', 
-      description: 'Experienced in ES6+, Node.js, and frameworks like React and Angular.', 
-      certificates: [
-        { 
-          title: 'JavaScript(Basic)', 
-          url: 'https://www.hackerrank.com/certificates/0f41040d3d05',
-          logo: '/hackerrankLogo.png' 
-        },
-        { 
-          title: 'JavaScript(Intermediate)', 
-          url: 'https://www.hackerrank.com/certificates/fef3f522842a',
-          logo: '/hackerrankLogo.png' 
-        }
-      ]
-    },
-    { 
-      title: 'HTML & CSS', 
-      description: 'Proficient in modern HTML5 and CSS3, including Flexbox and Grid.',
-      certificates: [ 
-        { 
-          title: 'CSS(Basic)', 
-          url: 'https://www.hackerrank.com/certificates/897fa0c1e80c',
-          logo: '/hackerrankLogo.png' 
-        }
-      ]
-    },
-    { 
-      title: 'Backend Development', 
-      description: 'Skilled in server-side technologies like Node.js, Express, and MongoDB.',
-      certificates: [
-        { 
-          title: 'Node(Basic)', 
-          url: 'https://www.hackerrank.com/certificates/907b57933fa5',
-          logo: '/hackerrankLogo.png' 
-        },
-        { 
-          title: 'Connecting to a MongoDB Database', 
-          url: 'https://learn.mongodb.com/c/7QVuPqjrRmuzsnjivBkrjg',
-          logo: '/mongoLogo.png' 
-        },
-        { 
-          title: 'Getting Started with MongoDB Atlas', 
-          url: 'https://learn.mongodb.com/c/2evdjaAhSruH00LD2R8kIw',
-          logo: '/mongoLogo.png' 
-        },
-        { 
-          title: 'Introduction to MongoDB', 
-          url: 'https://learn.mongodb.com/c/xZCLzSsHTKa46w00rVpHXg',
-          logo: '/mongoLogo.png' 
-        },
-        { 
-          title: 'MongoDB Aggregation', 
-          url: 'https://learn.mongodb.com/c/PC91ci4WRCWAO9IppXiteg',
-          logo: '/mongoLogo.png' 
-        },
-        { 
-          title: 'MongoDB Atlas Search', 
-          url: 'https://learn.mongodb.com/c/0JOmHIPtQnGhzLduieg0ug',
-          logo: '/mongoLogo.png' 
-        },
-        { 
-          title: 'MongoDB CRUD Operations', 
-          url: 'https://learn.mongodb.com/c/3IvkiSJ4RnaMtbhJrx7MXw',
-          logo: '/mongoLogo.png' 
-        },
-        { 
-          title: 'MongoDB Data Modeling Intro', 
-          url: 'https://learn.mongodb.com/c/dwHgrXY-TB-4j6CFAqQoYg',
-          logo: '/mongoLogo.png' 
-        },
-        { 
-          title: 'MongoDB Indexes', 
-          url: 'https://learn.mongodb.com/c/sPK81EbxTzCPIoPcwrIfEQ',
-          logo: '/mongoLogo.png' 
-        },
-        { 
-          title: 'MongoDB Transactions', 
-          url: 'https://learn.mongodb.com/c/exw2SDTET1WcAlLAZkewaw',
-          logo: '/mongoLogo.png' 
-        },
-        { 
-          title: 'MongoDB and the Document Model', 
-          url: 'https://learn.mongodb.com/c/YDwZ5hibSNGMUy1ytwEG0g',
-          logo: '/mongoLogo.png' 
-        }
-      ] 
-    },
-  ];
+const skillGroups = [
+  {
+    title: 'TypeScript & React',
+    description: 'Modern client work across portfolio, dashboard, selector, and image-editing interfaces.',
+    skills: ['TypeScript', 'JavaScript ES6+', 'React', 'Vite', 'React Router', 'Responsive UI'],
+  },
+  {
+    title: 'Backend APIs',
+    description: 'Server-side application work with REST endpoints, validation, routing, and configuration.',
+    skills: ['Node.js', 'Express', 'REST APIs', 'CORS', 'Environment Variables', 'Server-side TypeScript'],
+  },
+  {
+    title: 'Databases & Data',
+    description: 'Practical data modeling and persistence through inventory, collection, and database exercises.',
+    skills: ['MongoDB', 'PostgreSQL', 'Prisma', 'CRUD Workflows', 'CSV Imports', 'Data Modeling'],
+  },
+  {
+    title: 'Testing & Quality',
+    description: 'Verification habits from client, API, accessibility, and end-to-end project checks.',
+    skills: ['Vitest', 'Playwright', 'Supertest', 'React Testing Library', 'ESLint', 'Accessibility Testing'],
+  },
+  {
+    title: 'Cloud & Deployment',
+    description: 'Deployment-ready work using hosted frontends, CI checks, and managed media/storage services.',
+    skills: ['Vercel', 'GitHub Actions', 'Cloudinary', 'API Configuration', 'Build Pipelines', 'Git/GitHub'],
+  },
+  {
+    title: 'Computer Science Foundations',
+    description: 'Core programming practice from The Odin Project exercises and browser app builds.',
+    skills: ['Data Structures', 'Linked Lists', 'Hash Maps', 'Algorithms', 'Modular JavaScript', 'Unit Testing'],
+  },
+];
 
-  return (
-    <section id="skills">
-      <div className="section-heading">
-        <span>Toolkit</span>
-        <h2>Skills & Certifications</h2>
-      </div>
-      <div className="skills-list">
-        {skills.map((skill, index) => (
-          <div key={index} className={`skill ${skill.title === 'Backend Development' ? 'large' : 'small'}`}>
-            <h3 className="skill-title">{skill.title}</h3>
-            <p className="skill-description">{skill.description}</p>
-            {skill.certificates && (
-              <div className={`certificates-container ${skill.title === 'Backend Development' ? 'two-columns' : ''}`}>
-                {skill.certificates.map((certificate, certIndex) => (
-                  <a 
-                    key={certIndex}
-                    href={certificate.url} 
-                    className="certificate-link" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <img src={certificate.logo} alt={`${certificate.title} logo`} />
-                    {certificate.title}
-                  </a>
-                ))}
-              </div>
-            )}
+const certifications = [
+  {
+    title: 'JavaScript (Basic)',
+    issuer: 'HackerRank',
+    url: 'https://www.hackerrank.com/certificates/0f41040d3d05',
+    logo: '/hackerrankLogo.png',
+  },
+  {
+    title: 'JavaScript (Intermediate)',
+    issuer: 'HackerRank',
+    url: 'https://www.hackerrank.com/certificates/fef3f522842a',
+    logo: '/hackerrankLogo.png',
+  },
+  {
+    title: 'CSS (Basic)',
+    issuer: 'HackerRank',
+    url: 'https://www.hackerrank.com/certificates/897fa0c1e80c',
+    logo: '/hackerrankLogo.png',
+  },
+  {
+    title: 'Node (Basic)',
+    issuer: 'HackerRank',
+    url: 'https://www.hackerrank.com/certificates/907b57933fa5',
+    logo: '/hackerrankLogo.png',
+  },
+  {
+    title: 'Connecting to a MongoDB Database',
+    issuer: 'MongoDB University',
+    url: 'https://learn.mongodb.com/c/7QVuPqjrRmuzsnjivBkrjg',
+    logo: '/mongoLogo.png',
+  },
+  {
+    title: 'Getting Started with MongoDB Atlas',
+    issuer: 'MongoDB University',
+    url: 'https://learn.mongodb.com/c/2evdjaAhSruH00LD2R8kIw',
+    logo: '/mongoLogo.png',
+  },
+  {
+    title: 'Introduction to MongoDB',
+    issuer: 'MongoDB University',
+    url: 'https://learn.mongodb.com/c/xZCLzSsHTKa46w00rVpHXg',
+    logo: '/mongoLogo.png',
+  },
+  {
+    title: 'MongoDB Aggregation',
+    issuer: 'MongoDB University',
+    url: 'https://learn.mongodb.com/c/PC91ci4WRCWAO9IppXiteg',
+    logo: '/mongoLogo.png',
+  },
+  {
+    title: 'MongoDB Atlas Search',
+    issuer: 'MongoDB University',
+    url: 'https://learn.mongodb.com/c/0JOmHIPtQnGhzLduieg0ug',
+    logo: '/mongoLogo.png',
+  },
+  {
+    title: 'MongoDB CRUD Operations',
+    issuer: 'MongoDB University',
+    url: 'https://learn.mongodb.com/c/3IvkiSJ4RnaMtbhJrx7MXw',
+    logo: '/mongoLogo.png',
+  },
+  {
+    title: 'MongoDB Data Modeling Intro',
+    issuer: 'MongoDB University',
+    url: 'https://learn.mongodb.com/c/dwHgrXY-TB-4j6CFAqQoYg',
+    logo: '/mongoLogo.png',
+  },
+  {
+    title: 'MongoDB Indexes',
+    issuer: 'MongoDB University',
+    url: 'https://learn.mongodb.com/c/sPK81EbxTzCPIoPcwrIfEQ',
+    logo: '/mongoLogo.png',
+  },
+  {
+    title: 'MongoDB Transactions',
+    issuer: 'MongoDB University',
+    url: 'https://learn.mongodb.com/c/exw2SDTET1WcAlLAZkewaw',
+    logo: '/mongoLogo.png',
+  },
+  {
+    title: 'MongoDB and the Document Model',
+    issuer: 'MongoDB University',
+    url: 'https://learn.mongodb.com/c/YDwZ5hibSNGMUy1ytwEG0g',
+    logo: '/mongoLogo.png',
+  },
+];
+
+const training = [
+  'The Odin Project - Full Stack JavaScript Path',
+  'freeCodeCamp Relational Database coursework and Bash/PostgreSQL exercises',
+];
+
+const Skills = () => (
+  <section id="skills">
+    <div className="section-heading">
+      <span>Toolkit</span>
+      <h2>Skills & Certifications</h2>
+      <p>Current tools and verified training, selected from the projects and exercises I have completed.</p>
+    </div>
+
+    <div className="skills-grid" aria-label="Technical skills">
+      {skillGroups.map((group) => (
+        <article key={group.title} className="skill-card">
+          <div>
+            <h3 className="skill-title">{group.title}</h3>
+            <p className="skill-description">{group.description}</p>
           </div>
-        ))}
+          <div className="skill-tags" aria-label={`${group.title} skills`}>
+            {group.skills.map((skill) => (
+              <span key={skill}>{skill}</span>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div className="credentials-layout">
+      <div className="training-panel">
+        <span className="credentials-eyebrow">Completed Training</span>
+        <h3>Structured Learning</h3>
+        <ul>
+          {training.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
       </div>
-    </section>
-  );
-};
+
+      <div className="certifications-panel">
+        <span className="credentials-eyebrow">Credentials</span>
+        <h3>Certifications</h3>
+        <div className="certificates-grid">
+          {certifications.map((certificate) => (
+            <a
+              key={`${certificate.issuer}-${certificate.title}`}
+              href={certificate.url}
+              className="certificate-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={certificate.logo} alt={`${certificate.issuer} logo`} />
+              <span>
+                <strong>{certificate.title}</strong>
+                <small>{certificate.issuer}</small>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+);
 
 export default Skills;
