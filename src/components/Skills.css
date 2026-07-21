@@ -39,6 +39,7 @@
 
 .skill-title {
   color: var(--text-color);
+  font-family: var(--font-heading);
   font-size: 1.15rem;
   line-height: 1.25;
   margin: 0 0 0.75rem;
@@ -63,6 +64,7 @@
   border: 1px solid var(--border-color);
   border-radius: 999px;
   color: var(--secondary-text-color);
+  font-family: var(--font-mono);
   font-size: 0.78rem;
   padding: 0.3rem 0.55rem;
 }
@@ -83,6 +85,7 @@
 .credentials-eyebrow {
   color: var(--accent-color);
   display: block;
+  font-family: var(--font-mono);
   font-size: 0.76rem;
   font-weight: 800;
   margin-bottom: 0.55rem;

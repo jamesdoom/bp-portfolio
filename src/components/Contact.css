@@ -21,6 +21,7 @@ form textarea {
   border-radius: 8px;
   color: var(--text-color);
   display: block;
+  font-family: var(--font-body);
   margin-bottom: 1rem;
   outline: none;
   padding: 0.85rem 1rem;
@@ -44,6 +45,7 @@ form button {
   border-radius: 8px;
   color: var(--background-color);
   cursor: pointer;
+  font-family: var(--font-body);
   font-weight: 800;
   padding: 0.8rem 1.2rem;
   transition: background-color 0.3s ease;

@@ -19,6 +19,7 @@
   align-items: center;
   color: var(--text-color);
   display: flex;
+  font-family: var(--font-heading);
   gap: 0.8rem;
   text-decoration: none;
 }
@@ -53,6 +54,7 @@
 
 .wordmark-role {
   color: var(--muted-text-color);
+  font-family: var(--font-body);
   font-size: 0.76rem;
   font-weight: 700;
   margin-top: 0.1rem;
@@ -72,6 +74,7 @@
 
 .nav-links a {
   color: var(--secondary-text-color);
+  font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 700;
   text-decoration: none;
