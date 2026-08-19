@@ -3,33 +3,33 @@ import './Skills.css';
 
 const skillGroups = [
   {
-    title: 'TypeScript & React',
-    description: 'Modern client work across portfolio, dashboard, selector, and image-editing interfaces.',
+    title: 'Product Interfaces',
+    description: 'Responsive, accessible interfaces for data-rich products and interactive tools.',
     skills: ['TypeScript', 'JavaScript ES6+', 'React', 'Vite', 'React Router', 'Responsive UI'],
   },
   {
-    title: 'Backend APIs',
-    description: 'Server-side application work with REST endpoints, validation, routing, and configuration.',
+    title: 'APIs & Services',
+    description: 'Secure provider integrations, validation, caching, routing, and friendly failure states.',
     skills: ['Node.js', 'Express', 'REST APIs', 'CORS', 'Environment Variables', 'Server-side TypeScript'],
   },
   {
-    title: 'Databases & Data',
-    description: 'Practical data modeling and persistence through inventory, collection, and database exercises.',
+    title: 'Data & Persistence',
+    description: 'Practical modeling and storage for inventories, user preferences, and production workflows.',
     skills: ['MongoDB', 'PostgreSQL', 'Prisma', 'CRUD Workflows', 'CSV Imports', 'Data Modeling'],
   },
   {
     title: 'Testing & Quality',
-    description: 'Verification habits from client, API, accessibility, and end-to-end project checks.',
+    description: 'Client, API, accessibility, and end-to-end checks built into the delivery process.',
     skills: ['Vitest', 'Playwright', 'Supertest', 'React Testing Library', 'ESLint', 'Accessibility Testing'],
   },
   {
-    title: 'Cloud & Deployment',
-    description: 'Deployment-ready work using hosted frontends, CI checks, and managed media/storage services.',
+    title: 'Delivery & Cloud',
+    description: 'Deployment-ready applications with CI checks and managed media and storage services.',
     skills: ['Vercel', 'GitHub Actions', 'Cloudinary', 'API Configuration', 'Build Pipelines', 'Git/GitHub'],
   },
   {
-    title: 'Computer Science Foundations',
-    description: 'Core programming practice from The Odin Project exercises and browser app builds.',
+    title: 'Engineering Foundations',
+    description: 'Core programming, algorithms, modular architecture, and maintainable application structure.',
     skills: ['Data Structures', 'Linked Lists', 'Hash Maps', 'Algorithms', 'Modular JavaScript', 'Unit Testing'],
   },
 ];
@@ -130,8 +130,8 @@ const Skills = () => (
   <section id="skills">
     <div className="section-heading">
       <span>Toolkit</span>
-      <h2>Skills & Certifications</h2>
-      <p>Current tools and verified training, selected from the projects and exercises I have completed.</p>
+      <h2>A toolkit shaped by the work.</h2>
+      <p>Technologies I use to take products from a useful idea to a tested, deployed experience.</p>
     </div>
 
     <div className="skills-grid" aria-label="Technical skills">

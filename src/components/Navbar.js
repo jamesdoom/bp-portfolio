@@ -20,16 +20,16 @@ const Navbar = () => {
         </span>
       </a>
 
-      <button className="toggle-button" onClick={toggleNav} aria-label="Toggle navigation">
+      <button className="toggle-button" onClick={toggleNav} aria-label="Toggle navigation" aria-expanded={isNavVisible}>
         <Icon path={mdiMenu} size={1.35} />
       </button>
 
       <ul className={`nav-links ${isNavVisible ? 'show' : ''}`}>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#portfolio" onClick={() => setNavVisible(false)}>Work</a></li>
+        <li><a href="#about" onClick={() => setNavVisible(false)}>About</a></li>
+        <li><a href="#experience" onClick={() => setNavVisible(false)}>Experience</a></li>
+        <li><a href="#skills" onClick={() => setNavVisible(false)}>Toolkit</a></li>
+        <li><a href="#contact" onClick={() => setNavVisible(false)} className="nav-contact">Let&apos;s talk</a></li>
       </ul>
     </nav>
   );

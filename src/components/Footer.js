@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>&copy; {currentYear} Brian Palmer. All rights reserved.</p>
+        <p>&copy; {currentYear} Brian Palmer <span>·</span> Designed and built in Tampa, Florida.</p>
         <a href="#top" onClick={scrollToTop} className="back-to-top">Back to top</a>
       </div>
     </footer>

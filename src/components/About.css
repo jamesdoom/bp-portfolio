@@ -1,57 +1,14 @@
-#about {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  margin: 0 auto;
-  max-width: 920px;
-  padding: 5.5rem 2rem;
-}
-
-.about-content {
-  align-items: start;
-  display: grid;
-  gap: 2.25rem;
-  grid-template-columns: 180px 1fr;
-}
-
-.about-image {
-  border: 1px solid var(--border-color);
-  border-radius: 50%;
-  box-shadow: var(--box-shadow);
-  grid-row: 1 / span 3;
-  height: auto;
-  width: 180px;
-}
-
-.about-content p {
-  color: var(--secondary-text-color);
-  font-size: 1rem;
-  grid-column: 2;
-  line-height: 1.65;
-  margin-bottom: 1.15rem;
-  text-align: left;
-}
-
-@media (max-width: 768px) {
-  #about {
-    padding: 4rem 1.5rem;
-  }
-
-  .about-content {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    width: 100%;
-  }
-
-  .about-image {
-    grid-row: auto;
-    margin: 0 0 1.5rem;
-    width: 145px;
-  }
-
-  .about-content p {
-    grid-column: auto;
-    max-width: 300px;
-    overflow-wrap: break-word;
-    width: 100%;
-  }
-}
+#about { border-top:1px solid var(--border-color); color:var(--text-color); margin:0 auto; max-width:1160px; padding:8rem 2.5rem; }
+#about .section-heading { max-width:850px; }
+.about-content { align-items:start; display:grid; gap:clamp(2.5rem,8vw,7rem); grid-template-columns:260px minmax(0,1fr); }
+.about-portrait { display:grid; gap:1rem; }
+.about-image { border:1px solid var(--border-color); border-radius:18px; filter:grayscale(15%); width:100%; }
+.about-portrait span { color:var(--muted-text-color); font-family:var(--font-mono); font-size:.72rem; letter-spacing:.08em; text-align:center; text-transform:uppercase; }
+.about-copy { max-width:700px; }
+.about-copy p { color:var(--secondary-text-color); font-size:1.02rem; line-height:1.75; margin-bottom:1.2rem; }
+.about-copy .about-lead { color:var(--text-color); font-family:var(--font-heading); font-size:clamp(1.45rem,3vw,2.25rem); letter-spacing:-.035em; line-height:1.35; margin-bottom:1.7rem; }
+.about-principles { border-top:1px solid var(--border-color); display:grid; gap:1rem; grid-template-columns:repeat(3,1fr); margin-top:2.5rem; padding-top:1.5rem; }
+.about-principles div { display:grid; gap:.45rem; }
+.about-principles strong { color:var(--accent-color); font-family:var(--font-mono); font-size:.7rem; }
+.about-principles span { font-size:.82rem; font-weight:700; line-height:1.35; }
+@media(max-width:700px){#about{padding:5.5rem 1.5rem}.about-content{grid-template-columns:1fr}.about-portrait{margin:auto;max-width:180px}.about-principles{grid-template-columns:1fr}.about-principles div{grid-template-columns:30px 1fr}}

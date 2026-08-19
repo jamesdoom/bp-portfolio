@@ -49,7 +49,8 @@ const Contact = () => {
     <section id="contact">
       <div className="section-heading">
         <span>Contact</span>
-        <h2>Let&apos;s Connect</h2>
+        <h2>Have a useful problem to solve?</h2>
+        <p>I&apos;m interested in full-stack opportunities and collaborations where thoughtful software can make a practical difference.</p>
       </div>
       <form onSubmit={handleSubmit}>
         <input

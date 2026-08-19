@@ -5,17 +5,21 @@ const About = () => {
   return (
     <section id="about">
       <div className="section-heading">
-        <span>Profile</span>
-        <h2>About Brian</h2>
-        <p>A technology-minded operator moving practical business experience into full-stack software development.</p>
+        <span>How I work</span>
+        <h2>Practical experience,<br />translated into software.</h2>
       </div>
       <div className="about-content">
-        <img src="/brian.png" alt="Brian Palmer" className="about-image" />
-        <p>Hello, I&apos;m Brian. For as long as I can remember, I&apos;ve been deeply interested and involved in computer technology. Even when my professional titles had very little to do with IT, I always ended up being &apos;that&apos; guy who could troubleshoot problems and implement new tech.</p>
-
-        <p>To pursue a full-time career in the world of technology, I acquired my second degree - a Bachelor of Science in Computer Information Systems. I have completed The Odin Project&apos;s Full Stack JavaScript Developer path and I&apos;ll be regularly updating my project list with the public GitHub repositories I&apos;m currently working on or have finished.</p>
-
-        <p>As an enthusiastic learner, I actively seek out opportunities to expand my skill set. I&apos;ve delved into backend development, database management, and responsive design techniques. I look forward to collaborating with others and continuing to grow professionally!</p>
+        <div className="about-portrait"><img src="/brian.png" alt="Brian Palmer" className="about-image" /><span>Tampa, Florida</span></div>
+        <div className="about-copy">
+          <p className="about-lead">Operations experience taught me to spot inefficient workflows. Software development lets me rebuild them.</p>
+          <p>I&apos;ve spent my career solving practical problems—managing business systems, guiding technology migrations, and becoming the person people call when a process or device stops working.</p>
+          <p>That perspective now shapes the products I build: clear interfaces, dependable data, sensible failure states, and details that respect the person using the software.</p>
+          <div className="about-principles">
+            <div><strong>01</strong><span>Start with the real problem</span></div>
+            <div><strong>02</strong><span>Make complexity feel simple</span></div>
+            <div><strong>03</strong><span>Test the complete experience</span></div>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -18,11 +18,11 @@ const App = () => {
     <div className="App">
       <Navbar />
       <Hero />
-      <About />
-      <Education />
-      <Experience />
-      <Skills />
       <Portfolio />
+      <About />
+      <Experience />
+      <Education />
+      <Skills />
       <Contact />
       <Footer />
     </div>
